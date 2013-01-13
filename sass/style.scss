@@ -1,0 +1,24 @@
+@import "test/test";
+@import "plugin/plugin";
+
+@debug $output-styles;
+
+@mixin test-output($percentage, $output) {
+  @if $output == 'width' {
+    @include output-width($percentage);
+  }
+  @else if $output == 'height' {
+    @include output-height($percentage);
+  }
+}
+
+
+
+
+#foo {
+  @include test-span(3, 12, 'width');
+}
+
+#bar {
+  @include test-span(3, 12, 'height');
+}

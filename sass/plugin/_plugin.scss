@@ -1,0 +1,5 @@
+$output-styles: append($output-styles, 'height');
+
+@mixin output-height($percentage) {
+  height: $percentage;
+}

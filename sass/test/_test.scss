@@ -1,0 +1,17 @@
+$output-styles: 'width';
+
+@mixin test-span($span, $columns, $output) {
+  $percentage: percentage($span / $columns);
+
+  @include test-output($percentage, $output);
+}
+
+@mixin test-output($percentage, $output) {
+  @if $output == 'width' {
+    @include output-width($percentage);
+  }
+}
+
+@mixin output-width($percentage) {
+  width: $percentage;
+}
